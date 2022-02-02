@@ -1,4 +1,4 @@
-# Dokerfile: Debian-10 for Molecule CI 
+# Dockerfile: Debian-10 for Molecule CI 
 
 [![Build](https://github.com/darexsu/docker-debian-10/actions/workflows/build.yml/badge.svg)](https://github.com/darexsu/docker-debian-10/actions/workflows/build.yml)
 
