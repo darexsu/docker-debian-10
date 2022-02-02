@@ -3,7 +3,7 @@
 [![Build](https://github.com/darexsu/docker-debian-10/actions/workflows/build.yml/badge.svg)](https://github.com/darexsu/docker-debian-10/actions/workflows/build.yml)
 [![Docker pulls](https://img.shields.io/docker/pulls/darexsu/molecule-debian-10.svg?maxAge=2592000)](https://hub.docker.com/r/darexsu/molecule-debian-10/)
 
-Debian-10 for Ansible Playbooks testing
+Pre-build Debian 10. Image already has Ansible inside, so Molecule doesn't need to waste time building it.
 
 ### Example molecule.yml
 ```yaml
@@ -18,7 +18,8 @@ platforms:
     command: ${MOLECULE_DOCKER_COMMAND:-""}
     volumes:
       - /sys/fs/cgroup:/sys/fs/cgroup:ro
-    privileged: true    
+    privileged: true
+    pre_build_image: true
 provisioner:
   name: ansible
   playbooks:
